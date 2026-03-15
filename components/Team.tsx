@@ -3,22 +3,22 @@
 export default function Team() {
   const teamMembers = [
     {
-      name: "Kuir Juach Kuir Thuch",
-      position: "Co-Founder & Chief Executive Officer (CEO)",
-      image: "/images/kuir-juach.webp",
-      bio: "Kuir Juach Kuir Thuch is a Co-Founder of Haggiga Organics and leads the overall strategic direction of the company. As CEO, he focuses on shaping the vision of the business, building strong partnerships, and guiding the long-term growth of the company. His leadership ensures that Haggiga Organics continues to expand its impact while supporting local farmers and promoting locally produced groundnut oil.",
-    },
-    {
       name: "Mabior Diing Bul",
-      position: "Co-Founder & Chief Operations Officer (COO)",
+      position: "Co-Founder & Chief Executive Officer (CEO)",
       image: "/images/sdgddgg.jpg",
-      bio: "Mabior Diing Bul is a Co-Founder of Haggiga Organics and oversees the operational side of the business. He manages the sourcing of groundnuts from farmers, coordinates the oil production process, and ensures that quality standards are maintained throughout the production chain. His work ensures efficiency and consistency in delivering high-quality groundnut oil to customers.",
+      bio: "Mabior Diing Bul is a Co-Founder of Haggiga Organics and leads the overall strategic direction of the company. As CEO, he focuses on shaping the vision of the business, building strong partnerships, and guiding the long-term growth of the company. His leadership ensures that Haggiga Organics continues to expand its impact while supporting local farmers and promoting locally produced groundnut oil.",
     },
     {
       name: "Thon Kuot Amol",
-      position: "Co-Founder & Chief Marketing & Finance Officer (CMFO)",
+      position: "Co-Founder & Chief Operations Officer (COO)",
       image: "/images/thon-kuot.webp",
-      bio: "Thon Kuot Amol is a Co-Founder of Haggiga Organics and leads the company's marketing and financial strategy. He is responsible for brand development, financial planning, and market growth initiatives. His role ensures that the product reaches customers effectively while supporting the sustainable growth of the business.",
+      bio: "Thon Kuot Amol is a Co-Founder of Haggiga Organics and oversees the operational side of the business. He manages the sourcing of groundnuts from farmers, coordinates the oil production process, and ensures that quality standards are maintained throughout the production chain. His work ensures efficiency and consistency in delivering high-quality groundnut oil to customers.",
+    },
+    {
+      name: "Kuir Juach Kuir Thuch",
+      position: "Co-Founder & Chief Marketing & Finance Officer (CMFO)",
+      image: "/images/kuir-juach.webp",
+      bio: "Kuir Juach Kuir Thuch a Co-Founder of Haggiga Organics and leads the company's marketing and financial strategy. He is responsible for brand development, financial planning, and market growth initiatives. His role ensures that the product reaches customers effectively while supporting the sustainable growth of the business.",
     },
   ];
 
