@@ -3,18 +3,35 @@ import { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    fullName: "",
-    phone: "",
-    email: "",
-    product: "",
-    quantity: "",
     message: "",
+    email: "",
+    phone: "",
+    fullName: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyZe6C0htgw5wWTEnuJs6gLxNdlmumJAqAppHPlbbI7oVpVdnQ4yPNe2LBKG34ErSCF/exec";
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Thank you for your inquiry! We will contact you soon.");
-    setFormData({ fullName: "", phone: "", email: "", product: "", quantity: "", message: "" });
+    setLoading(true);
+    setStatus("");
+    try {
+      const params = new URLSearchParams({
+        fullName: formData.fullName,
+        phone: formData.phone,
+        email: formData.email,
+        message: formData.message,
+      });
+      await fetch(`${SCRIPT_URL}?${params.toString()}`, { method: "GET", mode: "no-cors" });
+      setStatus("success");
+      setFormData({ message: "", email: "", phone: "", fullName: "" });
+    } catch {
+      setStatus("error");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -62,12 +79,19 @@ export default function Contact() {
           <div className="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
             <h3 className="text-2xl font-bold text-primary mb-6">Order / Inquiry Form</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
+              <textarea
+                placeholder="Message"
+                rows={4}
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300 hover:border-secondary"
+              />
               <input
-                type="text"
-                placeholder="Full Name"
+                type="email"
+                placeholder="Email"
                 required
-                value={formData.fullName}
-                onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300 hover:border-secondary"
               />
               <input
@@ -79,46 +103,26 @@ export default function Contact() {
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300 hover:border-secondary"
               />
               <input
-                type="email"
-                placeholder="Email"
-                required
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300 hover:border-secondary"
-              />
-              <select
-                required
-                value={formData.product}
-                onChange={(e) => setFormData({ ...formData, product: e.target.value })}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300 hover:border-secondary"
-              >
-                <option value="">Product Interested In</option>
-                <option value="1L">Pure Groundnut Oil - 1L</option>
-                <option value="5L">Bulk Groundnut Oil - 5L</option>
-                <option value="20L">Commercial Groundnut Oil - 20L</option>
-                <option value="custom">Custom Order</option>
-              </select>
-              <input
                 type="text"
-                placeholder="Quantity"
+                placeholder="Full Name"
                 required
-                value={formData.quantity}
-                onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300 hover:border-secondary"
-              />
-              <textarea
-                placeholder="Message"
-                rows={4}
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                value={formData.fullName}
+                onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300 hover:border-secondary"
               />
               <button
                 type="submit"
-                className="w-full bg-secondary hover:bg-primary text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                disabled={loading}
+                className="w-full bg-secondary hover:bg-primary text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Submit Order Request
+                {loading ? "Submitting..." : "Submit Order Request"}
               </button>
+              {status === "success" && (
+                <p className="text-green-600 text-center font-medium">Thank you! We will contact you soon.</p>
+              )}
+              {status === "error" && (
+                <p className="text-red-500 text-center font-medium">Something went wrong. Please try again.</p>
+              )}
             </form>
           </div>
         </div>
