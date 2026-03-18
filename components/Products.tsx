@@ -8,36 +8,36 @@ export default function Products() {
       name: "Pure Groundnut Cooking Oil",
       features: ["100% locally sourced groundnuts", "High smoke point for cooking", "Rich in healthy fats", "Affordable and high quality"],
       images: [
-        "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800&q=80",
-        "https://images.unsplash.com/photo-1608797178974-15b35a64ede9?w=800&q=80",
-        "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?w=800&q=80",
+        "/images/OilPic.jpeg",
+        "/images/OilPic2.jpeg",
+        "/images/FirstPic.jpeg",
       ],
     },
     {
       name: "Premium Groundnut Oil - 1L",
       features: ["Perfect for households", "Natural and unrefined", "Supports local farmers", "Great for frying and cooking"],
       images: [
-        "https://images.unsplash.com/photo-1608797178974-15b35a64ede9?w=800&q=80",
-        "https://images.unsplash.com/photo-1587049352846-4a222e784422?w=800&q=80",
-        "https://images.unsplash.com/photo-1589927986089-35812388d1f4?w=800&q=80",
+        "/images/SecondPic.jpeg",
+        "/images/thirdPic.jpeg",
+        "/images/fourPic.jpeg",
       ],
     },
     {
       name: "Bulk Groundnut Oil - 5L",
       features: ["Ideal for small businesses", "Cost-effective solution", "Consistent quality", "Supports food vendors"],
       images: [
-        "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800&q=80",
-        "https://images.unsplash.com/photo-1608797178974-15b35a64ede9?w=800&q=80",
-        "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?w=800&q=80",
+        "/images/EightPic.jpeg",
+        "/images/ninePic.jpeg",
+        "/images/TenPic.jpeg",
       ],
     },
     {
       name: "Commercial Groundnut Oil - 20L",
       features: ["For restaurants and vendors", "Bulk pricing available", "Fresh and pure", "Locally produced"],
       images: [
-        "https://images.unsplash.com/photo-1598511726623-d2e9996892f0?w=800&q=80",
-        "https://images.unsplash.com/photo-1587049633312-d628ae50a8ae?w=800&q=80",
-        "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=800&q=80",
+        "/images/TwelevePic.jpeg",
+        "/images/elevenPic.jpeg",
+        "/images/sixPic.jpeg",
       ],
     },
   ];

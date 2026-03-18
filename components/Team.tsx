@@ -5,7 +5,7 @@ export default function Team() {
     {
       name: "Mabior Diing Bul",
       position: "Co-Founder & Chief Executive Officer (CEO)",
-      image: "/images/sdgddgg.jpg",
+      image: "/images/mabior-diing.jpg",
       bio: "Mabior Diing Bul is a Co-Founder of Haggiga Organics and leads the overall strategic direction of the company. As CEO, he focuses on shaping the vision of the business, building strong partnerships, and guiding the long-term growth of the company. His leadership ensures that Haggiga Organics continues to expand its impact while supporting local farmers and promoting locally produced groundnut oil.",
     },
     {
