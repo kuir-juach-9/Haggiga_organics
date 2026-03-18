@@ -11,9 +11,9 @@ export const metadata = {
 
 export default function ProductsPage() {
   const heroImages = [
-    "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1920&q=80",
-    "https://images.unsplash.com/photo-1608797178974-15b35a64ede9?w=1920&q=80",
-    "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?w=1920&q=80",
+    "/images/OilPic.jpeg",
+    "/images/OilPic2.jpeg",
+    "/images/fourPic.jpeg",
   ];
 
   return (

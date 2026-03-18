@@ -11,9 +11,9 @@ export const metadata = {
 
 export default function AboutPage() {
   const heroImages = [
-    "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1920&q=80",
-    "https://images.unsplash.com/photo-1595855759920-86582396756a?w=1920&q=80",
-    "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1920&q=80",
+    "/images/FirstPic.jpeg",
+    "/images/SecondPic.jpeg",
+    "/images/thirdPic.jpeg",
   ];
 
   return (

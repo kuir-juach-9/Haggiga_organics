@@ -10,9 +10,9 @@ export const metadata = {
 
 export default function ContactPage() {
   const heroImages = [
-    "https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&q=80",
-    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80",
-    "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80",
+    "/images/sdgddgg.jpg",
+    "/images/FirstPic.jpeg",
+    "/images/SecondPic.jpeg",
   ];
 
   return (

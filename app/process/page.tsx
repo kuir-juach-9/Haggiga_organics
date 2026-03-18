@@ -10,9 +10,9 @@ export const metadata = {
 
 export default function ProcessPage() {
   const heroImages = [
-    "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1920&q=80",
-    "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1920&q=80",
-    "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1920&q=80",
+    "/images/EightPic.jpeg",
+    "/images/ninePic.jpeg",
+    "/images/TenPic.jpeg",
   ];
 
   return (
