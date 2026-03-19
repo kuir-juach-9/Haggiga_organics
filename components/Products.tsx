@@ -61,7 +61,7 @@ export default function Products() {
             >
               <div className="h-64 relative overflow-hidden">
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300 z-10"></div>
-                <Carousel images={product.images} autoPlayInterval={4000} showControls={false} />
+                <Carousel images={product.images} autoPlayInterval={index === 0 ? 0 : 4000} showControls={false} />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-primary mb-4 text-center group-hover:text-secondary transition-colors duration-300">{product.name}</h3>
@@ -89,7 +89,7 @@ export default function Products() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative h-96">
-                <Carousel images={products[selectedProduct].images} autoPlayInterval={4000} />
+                <Carousel images={products[selectedProduct].images} autoPlayInterval={selectedProduct === 0 ? 0 : 4000} />
                 <button
                   onClick={() => setSelectedProduct(null)}
                   className="absolute top-4 right-4 bg-white/90 hover:bg-white text-primary p-2 rounded-full z-30"

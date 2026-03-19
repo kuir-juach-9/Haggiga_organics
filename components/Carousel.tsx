@@ -11,11 +11,13 @@ export default function Carousel({ images, autoPlayInterval = 5000, showControls
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, autoPlayInterval);
+    if (autoPlayInterval > 0) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % images.length);
+      }, autoPlayInterval);
 
-    return () => clearInterval(interval);
+      return () => clearInterval(interval);
+    }
   }, [images.length, autoPlayInterval]);
 
   const goToPrevious = () => {
