@@ -14,24 +14,31 @@ export default function Products() {
       ],
     },
     {
+      name: "Pure Groundnut Cooking Oil - 500ML",
+      features: ["Compact size for everyday use", "100% pure groundnut oil", "Ideal for small households", "High quality and affordable"],
+      images: [
+        "/images/Pure groundnut cooking oil 500ML.png",
+      ],
+    },
+    {
       name: "Premium Groundnut Oil - 1L",
       features: ["Perfect for households", "Natural and unrefined", "Supports local farmers", "Great for frying and cooking"],
       images: [
-        "/images/OilPic2.jpeg",
+        "/images/Premium groundnut oil 1L.png",
       ],
     },
     {
       name: "Bulk Groundnut Oil - 5L",
       features: ["Ideal for small businesses", "Cost-effective solution", "Consistent quality", "Supports food vendors"],
       images: [
-        "/images/OilPic.jpeg",
+        "/images/Bulk Groundnut oil 5L.png",
       ],
     },
     {
       name: "Commercial Groundnut Oil - 20L",
       features: ["For restaurants and vendors", "Bulk pricing available", "Fresh and pure", "Locally produced"],
       images: [
-        "/images/oil 20 litres.png",
+        "/images/commercial groundnut oil 20 L.png",
       ],
     },
   ];
